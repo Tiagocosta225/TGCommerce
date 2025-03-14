@@ -19,7 +19,6 @@ import java.util.Set;
 
 @Entity
 @Table(name = "tb_product")
-
 public class Product {
 
     @Id
@@ -31,6 +30,7 @@ public class Product {
     private String description;
 
     private Double price;
+
     private String imgUrl;
 
     @ManyToMany

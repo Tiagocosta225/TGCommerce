@@ -14,11 +14,13 @@ import java.util.Set;
 @Table(name = "tb_category")
 public class Category {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
     private String name;
 
     @ManyToMany(mappedBy = "categories")
     private Set<Product> products = new HashSet<>();
+
     public Category(){
     }
 

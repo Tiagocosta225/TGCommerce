@@ -10,34 +10,34 @@ public class OrderItemPK {
 
     @ManyToOne
     @JoinColumn(name = "order_id")
-    private Order order;
+    private long order;
 
     @ManyToOne
     @JoinColumn(name = "product_id")
-    private Product product;
+    private long product;
 
     public OrderItemPK (){
 
     }
 
-    public OrderItemPK(Order order, Product product) {
+    public OrderItemPK(long order, long product) {
         this.order = order;
         this.product = product;
     }
 
-    public Order getOrder() {
+    public long getOrder() {
         return order;
     }
 
-    public void setOrder(Order order) {
+    public void setOrder(long order) {
         this.order = order;
     }
 
-    public Product getProduct() {
+    public long getProduct() {
         return product;
     }
 
-    public void setProduct(Product product) {
+    public void setProduct(long product) {
         this.product = product;
     }
 }

@@ -16,31 +16,31 @@ public class OrderItem {
     private Integer quantity;
     private Double price;
 
-    private Product product;
+    private long product;
 
     public OrderItem() {
     }
 
-    public OrderItem(Order order, Product product, Integer quantity, Double price) {
+    public OrderItem(long order, long product, Integer quantity, Double price) {
         id.setOrder(order);
         id.setProduct(product);
         this.quantity = quantity;
         this.price = price;
     }
 
-    public Order getOrder(){
+    public long getOrder(){
         return  id.getOrder();
     }
 
-    public void setOrder(Order order){
+    public void setOrder(long order){
         id.setOrder(order);
     }
 
-    public void setProduct(Product product){
+    public void setProduct(long product){
         id.setProduct(product);
     }
 
-    public Product getProduct() {
+    public long getProduct() {
         return id.getProduct();
     }
 
